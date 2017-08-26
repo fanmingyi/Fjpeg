@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -44,4 +44,14 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
+}
+
+//添加
+publish {
+    userOrg = 'fanmingyicode'//bintray.com用户名
+    groupId = 'com.fmy'//jcenter上的路径
+    artifactId = 'fjpeg'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'An image compression code library that encapsulates libjpeg'//描述，不重要
+    website = 'https://github.com/fanmingyi/Fjpeg'//网站，最好有，不重要
 }
